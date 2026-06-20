@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base Styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-secondary text-text-primary;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-bold;
+  }
+
+  h1 {
+    @apply text-5xl;
+  }
+
+  h2 {
+    @apply text-4xl;
+  }
+
+  h3 {
+    @apply text-3xl;
+  }
+
+  a {
+    @apply transition-colors duration-300;
+  }
+
+  button {
+    @apply transition-all duration-300 font-medium;
+  }
+}
+
+/* Component Styles */
+@layer components {
+  .btn-primary {
+    @apply bg-accent text-text-primary px-6 py-3 rounded-lg font-semibold hover:bg-accent-dark transition-colors duration-300;
+  }
+
+  .btn-secondary {
+    @apply bg-primary text-secondary px-6 py-3 rounded-lg font-semibold hover:bg-primary-dark transition-colors duration-300;
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary text-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary hover:text-secondary transition-colors duration-300;
+  }
+
+  .btn-ghost {
+    @apply text-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary hover:text-secondary transition-colors duration-300;
+  }
+
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20;
+  }
+
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .card {
+    @apply bg-secondary border border-neutral rounded-lg p-6 shadow-card hover:shadow-card-hover transition-shadow duration-300;
+  }
+
+  .card-dark {
+    @apply bg-primary text-secondary rounded-lg p-6 shadow-card hover:shadow-card-hover transition-shadow duration-300;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 border border-neutral rounded-lg focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent;
+  }
+
+  .section-title {
+    @apply text-4xl font-serif font-bold text-text-primary mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-text-secondary mb-12;
+  }
+}
+
+/* Animations */
+@layer utilities {
+  .animate-fade-in-up {
+    animation: fadeInUp 0.5s ease-out;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  @apply w-2 h-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-neutral;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary-dark;
+}
