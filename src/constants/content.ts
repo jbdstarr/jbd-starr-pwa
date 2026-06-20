@@ -68,7 +68,7 @@ export const services = [
     id: 9,
     title: 'Trim & Carpentry',
     description: 'Custom trim work, crown molding, and finish carpentry',
-    icon: '🪚',
+    icon: '🪛',
     href: '/services/trim-carpentry',
   },
   {
